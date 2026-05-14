@@ -1,3 +1,103 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+  :root {
+    --font-ethiopic: "Noto Sans Ethiopic", "Inter", system-ui, sans-serif;
+    --font-sans: "Inter", system-ui, sans-serif;
+    --bg-primary: #0B0B0B;
+    --bg-secondary: #141414;
+    --bg-card: #1a1a1a;
+    --bg-elevated: #1f1f1f;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --text-muted: #6b6b6b;
+    --accent-gold: #C89B3C;
+    --accent-gold-light: #D4A84A;
+    --accent-gold-dark: #A67D2E;
+    --border-color: #2a2a2a;
+    --success: #22c55e;
+    --error: #ef4444;
+    --warning: #f59e0b;
+  }
+  [data-theme="light"] {
+    --bg-primary: #F8F6F1;
+    --bg-secondary: #ffffff;
+    --bg-card: #ffffff;
+    --bg-elevated: #f0ede8;
+    --text-primary: #111111;
+    --text-secondary: #555555;
+    --text-muted: #888888;
+    --accent-gold: #C89B3C;
+    --accent-gold-light: #D4A84A;
+    --accent-gold-dark: #A67D2E;
+    --border-color: #e5e5e5;
+    --success: #16a34a;
+    --error: #dc2626;
+    --warning: #d97706;
+  }
+  body {
+    font-family: var(--font-ethiopic);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+}
+@layer components {
+  .gold-text-gradient {
+    background: linear-gradient(135deg, #C89B3C 0%, #D4A84A 50%, #A67D2E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .admin-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+  }
+  .admin-input {
+    width: 100%;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: var(--text-primary);
+    transition: all 0.2s;
+  }
+  .admin-input:focus {
+    outline: none;
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 0 3px rgba(200, 155, 60, 0.1);
+  }
+  .admin-btn {
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  .admin-btn-primary {
+    background: var(--accent-gold);
+    color: black;
+  }
+  .admin-btn-primary:hover {
+    background: var(--accent-gold-light);
+  } 
+  .admin-btn-secondary {
+    background: var(--bg-elevated);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+  }
+  .admin-btn-secondary:hover {
+    background: var(--bg-card);
+  }
+  .admin-btn-danger {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+  } 
+  .admin-btn-danger:hover {
+    background: rgba(239, 68, 68, 0.2);
+  }
+}
