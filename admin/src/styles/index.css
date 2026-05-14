@@ -71,6 +71,7 @@
     color: var(--text-primary);
     transition: all 0.2s;
   }
+  
   .admin-input:focus {
     outline: none;
     border-color: var(--accent-gold);
@@ -84,26 +85,32 @@
     transition: all 0.2s;
     cursor: pointer;
   }
+  
   .admin-btn-primary {
     background: var(--accent-gold);
     color: black;
   }
+  
   .admin-btn-primary:hover {
     background: var(--accent-gold-light);
   }
+  
   .admin-btn-secondary {
     background: var(--bg-elevated);
     color: var(--text-primary);
     border: 1px solid var(--border-color);
   }
+  
   .admin-btn-secondary:hover {
     background: var(--bg-card);
   }
+  
   .admin-btn-danger {
     background: rgba(239, 68, 68, 0.1);
     color: #ef4444;
     border: 1px solid rgba(239, 68, 68, 0.2);
   }
+  
   .admin-btn-danger:hover {
     background: rgba(239, 68, 68, 0.2);
   }
